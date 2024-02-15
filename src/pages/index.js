@@ -4,12 +4,23 @@
 import styles from '@/styles/Home.module.css'
 import Profile from './components/profile'
 import List from './qcomps/list_keys_id'
+import RecipeList from './qcomps/recipes'
+import Gallery from './qcomps/state'
+import Form from './qcomps/stuckForm'
+import FeedbackForm from './qcomps/thankYouCrash'
+import RequestTracker from './qcomps/shoppingCart'
 
 export default function Home() {
   return (
     <div className={styles.main}>
-        <Profile />
-        <List/>
+        {/* <Profile /> */}
+        {/* <List/> */}
+        {/* <RecipeList/> */}
+        {/* <Gallery/> */}
+        {/* <Form/> */}
+        {/* <FeedbackForm/> */}
+        <RequestTracker/>
+        
     </div>
   )
 }
