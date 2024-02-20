@@ -3,12 +3,15 @@
 // import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Profile from './components/profile'
-import List from './qcomps/list_keys_id'
+// import List from './qcomps/list_keys_id'
 import RecipeList from './qcomps/recipes'
 import Gallery from './qcomps/state'
 import Form from './qcomps/stuckForm'
 import FeedbackForm from './qcomps/thankYouCrash'
 import RequestTracker from './qcomps/shoppingCart'
+import Scoreboard from './qcomps/updObjectsForm'
+import List from'./qcomps/artistsRemoveArr'
+import BucketList from './qcomps/arrObj'
 
 export default function Home() {
   return (
@@ -19,7 +22,11 @@ export default function Home() {
         {/* <Gallery/> */}
         {/* <Form/> */}
         {/* <FeedbackForm/> */}
-        <RequestTracker/>
+        {/* <RequestTracker/> */}
+        {/* <Scoreboard/> */}
+        <List/>
+        {/* <BucketList/> */}
+
         
     </div>
   )

@@ -7,28 +7,36 @@ const initialList = [
   { id: 2, title: 'Terracotta Army', seen: true },
 ];
 
+// function deepCopy(list) {
+//   return list.map((item) => ({...item}));
+// }
+
 export default function BucketList() {
-  const [myList, setMyList] = useState(initialList);
+  const [myList, setMyList] = useState((initialList));
   const [yourList, setYourList] = useState(
-    initialList
+    (initialList)
   );
 
   function handleToggleMyList(artworkId, nextSeen) {
     const tmpList = myList.map(e => {
         if (e.id === artworkId) {
-            e.seen = nextSeen
+          return {...e, seen: nextSeen};
         }
-        return e
+        else{
+          return e;
+        }
     });
     setMyList(tmpList);
   }
 
   function handleToggleYourList(artworkId, nextSeen) {
     const tmpList = yourList.map(e => {
-        if (e.id === artworkId) {
-            e.seen = nextSeen
-        }
-        return e
+      if (e.id === artworkId) {
+        return {...e, seen: nextSeen};
+      }
+      else{
+        return e;
+      }
     });
     setYourList(tmpList);
   }
